@@ -1,0 +1,7 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+attendance.sqlite3
+generated_reports/
+

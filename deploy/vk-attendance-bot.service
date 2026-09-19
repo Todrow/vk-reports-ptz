@@ -1,0 +1,16 @@
+[Unit]
+Description=VK Attendance Bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=todrow
+WorkingDirectory=/home/todrow/Documents/vk-reports
+ExecStart=/home/todrow/Documents/vk-reports/.venv/bin/python /home/todrow/Documents/vk-reports/bot.py
+Restart=always
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

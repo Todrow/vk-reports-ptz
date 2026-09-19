@@ -1,0 +1,13 @@
+services:
+  vk-attendance-bot:
+    build: .
+    image: vk-attendance-bot:latest
+    container_name: vk-attendance-bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - vk-attendance-data:/app/data
+
+volumes:
+  vk-attendance-data:
